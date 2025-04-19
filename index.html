@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head lang="pt-BR">
+        <meta chasrset="UTF-8">
+        <link rel="stylesheet" href="./CSS/style.css">
+        <meta name="viewport" content="width=device-width, initia-scale=1,0">
+        <title>JOGO DA ADIVINHAÇÃO</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Adivinhe o número!</h1>
+            <div class="container_number">
+                <h2 id="secretNumber">?</h2> <!--Revelar número correto após acertar-->
+            </div>
+            <div id="feedback"> <!--Após cada tentativa, deverá dizer se está perto, longe etc-->
+                <p id="feedback_text">Tente um númeto de 1-100.</p>
+            </div>
+            <div class="user_area">
+                <input id="number" type="number" min="1" max="100" placeholder="Qual é o número secreto?">
+                <button id="button_test" onclick="teste()">Tentar</button>
+                <p id="times">Tentativas:<div id="tentativas" style="display: inline-block;">0</div></p> <!--Array.length do historio-->
+            </div>
+           
+            <p>Histórico:</p>
+            <div class="number_history" id="number_history"> <!--Array com todos os pushs das tentativas-->
+                
+            </div>
+            <div class="nwe_game">
+                <button id="button_new_game" onclick="reset()">Novo Jogo</button> 
+            </div>
+        </div>
+        <script src="./JS/script.js"></script>
+    </body>
+</html>

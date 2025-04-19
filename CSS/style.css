@@ -1,0 +1,78 @@
+html, body{
+    margin: 0;
+    padding: 10px;
+    background-color: gray;
+    font-family: monospace;
+}
+
+button{
+    border: 1px black solid;
+    border-radius: 6px;
+}
+
+.container{
+    padding: 10px 10px;
+    max-width: 300px;
+    width: 100vw;
+    background-color: aqua;
+    margin: auto;
+    text-align: center;
+    box-sizing: border-box;
+    border: 3px black solid;
+    border-radius: 10px;
+}
+
+.container_number{
+    padding: 10px 20px;
+    margin: 10px;
+    border: 2px black solid;
+    background-color: azure;
+    display: inline-block;
+    border-radius: 6px;
+}
+
+.feedback{
+    height: 30px;
+    
+    margin-bottom: 10px;
+
+}
+
+.user_area{
+    box-sizing: border-box;
+    width: 90%;
+    margin: auto;
+}
+
+.user_area input, button{
+    padding: 5px;
+    margin-bottom: 0px;
+    border: 1px black solid;
+    border-radius: 6px;
+    
+}
+
+.user_area input{
+    width: 68%;
+}
+
+#times{
+    margin: 0;
+    
+}
+
+.number_history{
+    margin: 10px 20px;
+    padding: 10px;
+    background-color: white;
+    min-height: 40px;
+    box-sizing:border-box;
+    border: 1px black solid;
+    border-radius: 6px;
+    word-wrap: break-word;
+    /*Serve para quebrar o texto ao ser inserido*/
+}
+
+#button_test:active, #button_new_game:active{
+    background-color: gray;
+}
