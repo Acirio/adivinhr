@@ -8,6 +8,7 @@
 
 let secretNumber;
 let numberHistory = [];
+let buttonNewGame = '<button id="button_new_game" onclick="reset()">Novo Jogo</button>';
 
 function numberGenerator(){
     secretNumber = Math.ceil(Math.random() * 100);
@@ -24,6 +25,7 @@ function compare(inputNumber){
     
     if (subtraction === 0){
         document.getElementById("secretNumber").textContent = secretNumber;
+        document.getElementById("new_game").innerHTML = `${buttonNewGame}`;
         return  "Você acertou!";
         
     } else if (subtraction >= 1 && subtraction <= 20){
@@ -37,7 +39,6 @@ function teste(){
     let inputNumber = document.getElementById("number").value;
     let result = compare(inputNumber);
     
-
     numberHistory.push(inputNumber);
 
     document.getElementById("tentativas").textContent = `${numberHistory.length}`;
@@ -58,4 +59,5 @@ function reset(){
     document.getElementById("feedback_text").textContent = "Tente um número de 1-100.";
     document.getElementById("secretNumber").textContent = "?";
     document.getElementById("number").value = "";
+    document.getElementById("new_game").innerHTML = ``;
 }
